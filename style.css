@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: hwb(177 5% 14% / 0.466);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "permanent marker", cursive;
+}
+
+span {
+    background: url("image6.png");
+    height: 100px;
+    width: 100px;
+    pointer-events: none;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: animate 7s linear;
+}
+
+h1 {
+    color: blue;
+    font-size: 7vw;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
+}
+
+/* calender styling */
+.calender {
+    text-align: center;
+    width: 14vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgb(232, 186, 87) 100%);
+    overflow: hidden;
+    border: 2px solid rgba(122, 35, 136, 0.671);
+    box-shadow: -2px 4px 8px;
+    border-radius: 20%;
+}   
+
+#month{
+    font-weight: 700;
+    padding: 1vw;
+    margin: 0;
+    font-size: 2.5vw;
+    background-color: #ee2e0c;
+}
+
+#daate{
+    padding: 2vw;
+    font-size: 4vw;
+}
+
+/* css for button */
+
+#btn{
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 60px;
+    height: 30px;
+    border: 2px solid whitesmoke;
+    border-radius: 7px;
+    box-shadow: 2px 4px 8px ;
+    overflow: hidden;       
+}
+
+button div{
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+    font-size: 18px;
+    text-shadow: -2px 5px 8px;
+}
+
+
+button::before{
+    content: '';
+    background-color: rgb(18, 190, 27);
+    width: 100%;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-radius: 50%;
+    top: --vartop;
+    left: --varleft;
+    transition: width .8s,height .8s;
+}
+
+button:hover::before{
+   
+    width: 400px;
+    height: 300px;
+}
+
+
+    
