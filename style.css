@@ -21,7 +21,7 @@ span {
     height: 100px;
     width: 100px;
     pointer-events: none;
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     left: 50%;
     top: 50%;
